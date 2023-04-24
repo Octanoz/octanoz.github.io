@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau&display=swap');
+
+/* Begin Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+An image is an inline element. You'll see slightly different behaviour of the image compared to text.
+Using \display: block\ makes it fill out the container completely
+See commented out image in HTML as an example.
+ */
+
+/* img {
+    display: block;
+} */
+
+/* End Reset */
+
+/* Utility Classes */
+
+/*
+You'll see in the HTML that by applying this nowrap we are preventing funny breaking of the text.
+ */
+.nowrap {
+    white-space: nowrap;
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+/* Emd Utility Classes */
+
+/*
+Notice bubbles.png is a transparant (drawn) picture and that's why this works.
+ */
+
+body {
+    font-family: 'Ysabeau', sans-serif;
+    /* font-size: 1.2rem; */
+    min-height: 100vh;
+    background-color: aliceblue;
+    background-image: url(../../img/bubbles.png),
+        linear-gradient(to left, steelblue, #fff);
+    background-repeat: repeat-y, no-repeat;
+    background-position: right center;
+
+    /* background: repeat-y center url(../../img/bubbles.png), no-repeat linear-gradient(to left, steelblue, #fff); */
+    background-size: 20%, auto;
+}
+
+/*
+Use \background-position\ if your image is larger than the available space and you want to focus on a different part of the picture than is currently in focus.
+ */
+
+.container {
+    background-color: hsl(25, 76%, 21%);
+    background-image: url(../../img/Nature-unsplash-background4.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*
+Adding the background colour we were originally using in the h1 to create a textbox now adds a sort of filter on the hero section.
+ */
+
+.hero {
+    border-bottom: 2px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-color: hsla(134, 71%, 21%, 0.3);
+}
+
+.h1 {
+    font-size: 2.1rem;
+    color: bisque;
+    text-shadow: 2px 2px 5px #000;
+    /* background-color: hsla(0, 0%, 0%, 0.39); */
+    /* padding: 0.25rem; */
+    /* border-radius: 15px; */
+}
+
+
+.profile-pic-figure {
+    width: 35%;
+}
+
+/*
+Our image wasn't square so the result is a bit stretched.
+With a square image you can make it round by using border-radius: 50%
+ */
+
+.profile-pic-figure img {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    border-radius: 50%;
+}
+
+/* .example {
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+}
+
+.example img {
+    width: 25%;
+    height: auto;
+} */
+
+.clip {
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: left;
+    background-image: url(../../img/Nature-unsplash-background4.png);
+    background-size: cover;
+    background-position: center;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* color: transparent; */
+    color: hsla(0, 0%, 10%, 0.199);
+}
+
+/*
+Here we needed to use -webkit- in front of \background-clip\ as was shown on the caniuse.com website.
+Vivaldi doesn't display this properly for instance.
+Take note that you should add the regular version as well for those browsers that do support this setting natively.
+Then we applied the black colour to the text but set the opacity to 20% so the background image can be seen through it.
+As before in the hero section, you can use the colour of the text as a filter and darken, lighten the section or saturate with another colour.
+ */
+
+/*
+Instead of playing around with the opacity and colours you can also set the colour to be transparant.
+  */
+
+@media (max-width: 1033px) {
+    .clip {
+        font-size: 28vw;
+    }
+}
+
+/*
+Here I have set up a separate setting for smaller screens. So far it seems you just need to eyeball it...
+Using the viewport width setting makes it responsive.
+ */

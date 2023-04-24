@@ -1,0 +1,36 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1rem;
+    padding: 0.5rem;
+    min-height: 100vh;
+    color: #180;
+    /* font-size: 1.5rem; */
+    background: linear-gradient(45deg, #da0e29 0%, #FF6 100%);
+    background-size: contain;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+ul {
+    margin-top: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+/* || MOBILE DEVICE LANDSCAPE || */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    ul {
+        columns: 2 250px;
+    }
+}
