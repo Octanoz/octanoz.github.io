@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     color: #180;
     /* font-size: 1.5rem; */
-    background: linear-gradient(45deg, #da0e29 0%, #FF6 100%);
+    background: linear-gradient(135deg, #da0e29 0%, #FF6 100%);
     background-size: contain;
 }
 
