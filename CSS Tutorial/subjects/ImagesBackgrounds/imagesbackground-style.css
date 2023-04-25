@@ -59,7 +59,7 @@ Use \background-position\ if your image is larger than the available space and y
 
 .container {
     background-color: hsl(25, 76%, 21%);
-    background-image: url(../../img/Nature-unsplash-background4.png);
+    background-image: url(../../img/Nature-unsplash-background6-1190x720.png);
     background-repeat: repeat;
     background-size: cover;
     background-position: center center;
@@ -120,8 +120,8 @@ With a square image you can make it round by using border-radius: 50%
 .clip {
     font-weight: 800;
     font-size: 18rem;
-    text-align: left;
-    background-image: url(../../img/Nature-unsplash-background4.png);
+    text-align: center;
+    background-image: url(../../img/Nature-unsplash-background6-1190x720.png);
     background-size: cover;
     background-position: center;
     text-transform: uppercase;
@@ -143,9 +143,9 @@ As before in the hero section, you can use the colour of the text as a filter an
 Instead of playing around with the opacity and colours you can also set the colour to be transparant.
   */
 
-@media (max-width: 1033px) {
+@media (max-width: 800px) {
     .clip {
-        font-size: 28vw;
+        font-size: 35vw;
     }
 }
 
