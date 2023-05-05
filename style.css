@@ -10,9 +10,9 @@ body {
     margin: 1rem;
     padding: 0.5rem;
     min-height: 100vh;
-    color: #180;
+    color: #001d3d;
     /* font-size: 1.5rem; */
-    background: linear-gradient(135deg, #da0e29 0%, #FF6 100%);
+    background: linear-gradient(135deg, #fefae0 0%, #dda15e 100%);
     background-size: contain;
 }
 
