@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Robin Heijer">
+    <meta name="description"
+        content="This page shows the details of the Little Taco Shop. You will find our menu, we sell tacos, burritos and enchiladas. Our opening hours, open 7 days a week. There is a brief history of the shop and you can also find ways to contact us.">
+    <meta name="keywords" content="tacos, tortillas, enchiladas, burritos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Taco Shop</title>
+    <link rel="shortcut icon" href="img/food-clipart-taco-18.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__h1 nowrap">Little Taco Shop</h1>
+
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="hours.html">Hours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2 class="hero__h2">Bienvenidos!</h2>
+        <figure>
+            <img src="img/tacos_and_drink_1000x667.png" alt="Tacos and a drink" title="We love tacos!" width="1000"
+                height="667">
+            <figcaption class="offscreen">Tacos and a drink</figcaption>
+        </figure>
+    </section>
+
+    <main class="main">
+        <section id="menu" class="main__section menu">
+            <h2 class="menu__h2">Our Menu</h2>
+
+            <table class="menu__container">
+                <caption class="offscreen">Our Tacos</caption>
+                <thead>
+                    <tr>
+                        <th class="menu__header" scope="col">Tacos</th>
+                        <th class="menu__header" scope="col">Quantity</th>
+                        <th class="menu__header" scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="menu__item menu__crunchy" scope="row" rowspan="3">Crunchy</th>
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">$1.50</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">$2.50</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">$3.25</td>
+                    </tr>
+                    <tr>
+                        <th class="menu__item menu__soft" scope="row" rowspan="3">Soft</th>
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">$2.00</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">$3.50</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">$4.50</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="menu__item menu__cs" colspan="3">Chips &amp; Salsa $2</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p class="center"><a href="#">Back to top</a></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><span class="nowrap">Copyright &copy; <time id="year"></time></span> <span class="nowrap">The Little Taco
+                Shop</span></p>
+    </footer>
+</body>
+
+</html>
