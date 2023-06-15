@@ -60,6 +60,9 @@ aside .sbheader {
 
 aside p {
     font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5em;
 }
 
 .sidebar {
@@ -80,9 +83,64 @@ aside img {
     border-radius: 50%;
 }
 
-/* || MOBILE DEVICE LANDSCAPE || */
-@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-    ul {
-        columns: 2 250px;
+/* MEDIA QUERY FOR MOBILE DEVICES */
+@media screen and (max-width: 767px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    aside {
+        width: 100vw;
+        align-items: flex-start;
+        position:static;
+        padding: 20px;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;        
+    }
+
+    .sbheader {
+        position: absolute;
+    }
+
+    aside img {
+        margin-bottom: 0;
+    }
+
+    aside p {
+        display: block;
+        font-size: 1em;
+    }
+
+    aside .sidebar_paragraph {
+        margin-top: 3.3em;
+    }
+
+    aside .sbparagraph1 {
+        margin-left: 0.5em;
+    }
+
+    aside .sbparagraph2 {
+        margin-top: 1em;
     }
 }
+
+/* || MOBILE DEVICE LANDSCAPE || */
+/*@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    aside {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .sidebar {
+        height: 100%;
+    }
+}*/
