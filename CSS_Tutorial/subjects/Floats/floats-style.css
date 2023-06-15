@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+/*
+Added an image for fun but it's obviously only working properly at one resolution right now.
+The image doesn't scale to the screen size.
+ */
+
+.block {
+    width: 30vw;
+    height: 33vw;
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+}
+
+.left {
+    float: left;
+    margin-right: 1rem;
+    background-image: url(../../img/css3-1841590_640.png);
+    background-size: cover;
+}
+
+.right {
+    float: right;
+    margin-left: 1rem;
+}
+
+/*
+Legacy approach to making sure the next paragraph start below the div float container is using \clear: (both)\ in a class.
+Just apply the class to a div before the paragraph that should start below the div and don't put any further data inside.
+This will remove the float from the surrounding text again so it can get separated from other containers.
+ */
+/* 
+Adding \overflow: auto\ would be an option but is also a legacy approach.
+As recommended by MDN \display: flow-root\ should be used instead.
+We did this on the section to make sure all of our text and the float are inside and the next paragraph starts below the float & section.
+ */
+
+.clear {
+    clear: both;
+}
+
+section {
+    background-color: bisque;
+    border: 1px solid #333;
+    padding: 1rem;
+    display: flow-root;
+}

@@ -1,0 +1,59 @@
+:root {
+    --main-bg-color: #faedcd;
+    --main-txt-color: #333;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    font-size: 1.1em;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+a {
+    color: hsl(74, 32%, 40%);
+}
+
+a:visited {
+    color: rgb(230, 141, 26);
+}
+
+a:hover,
+a:active {
+    color: hsl(74, 32%, 70%);
+}
+
+table,
+tr,
+th,
+td,
+caption {
+    border: 1px solid var(--main-txt-color);
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: separate;
+    padding: 0.5em;
+    text-align: center;
+}
+
+figure figcaption {
+    font-size: 0.8em;
+}
+
+figure img {
+    max-width: 80vw;
+    height: auto;
+}
+
+input,
+textarea {
+    background: #FAE8D4;
+}

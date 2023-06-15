@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+/*
+Using the \column-width\ assures that the columns don't get scrunched beyond that value.
+It will prefer to show less columns to adhere to the set width.
+ */
+
+/*
+The \column-rule\ is similar to the border we used in the HTML tutorial.
+  */
+
+.columns {
+    /* column-count: 4;
+    column-width: 250px; 
+    shorthand is \columns\
+    */
+    columns: 4 250px;
+    column-rule: 3px solid #333;
+    column-gap: 3rem;
+}
+
+/*
+The \margin-top: 0\ works before there is margin collapsing which makes sure that the margin of one paragraph doesn't double up the value of another.
+ */
+
+.columns p {
+    margin-top: 0;
+}
+
+/*
+Use \break-inside: avoid\ to prevent the header from deforming and showing some part of it in a different column.
+Use \break-before: column\ to force the header to the top of the column of the following paragraphs.
+This works well until the screen gets too small and all columns are shrunk to fit. You actually go from 4 to 2 similar sized columns to 3 tiny columns in this example.
+Definitely would need a media call to avoid weird behaviour on phones.
+ */
+
+.columns h2 {
+    margin-top: 0;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    break-inside: avoid;
+    /* break-before: column; */
+}
+
+.columns .quote {
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    column-span: all;
+    margin-top: 2rem;
+}
+
+/*
+To prevent text from being broken by the automatic resizing that happens when screen sizes decrease.
+ */
+
+.nowrap {
+    white-space: nowrap;
+}

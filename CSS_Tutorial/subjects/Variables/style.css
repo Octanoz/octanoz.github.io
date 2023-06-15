@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+    /* FONT */
+    --FONT-FAMILY: "Ysabeau", sans serif;
+    --FONT-SIZE: 1.5rem;
+    --FONT-SIZE-XL: 3rem;
+
+    /* COLOR */
+    --BGCOLOUR: #475569;
+    --ALTBGCOLOUR: #1e293b;
+    --RADIAL-COLOUR: whitesmoke;
+    --LIGHT-COLOUR: whitesmoke;
+    --DARK-COLOUR: #000;
+
+    /* SQUARE */
+    --SQUARE-BGCOLOUR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);
+
+    /* GENERAL */
+    --PADDING: 0.5rem;
+    --SHADOW: 0 6px 5px -5px var(--DARK-COLOUR);
+    --BORDER: 2px solid var(--DARK-COLOUR);
+}
+
+/*
+You will have to put color in the american spelling here for it to work as intended.
+ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BGCOLOUR: #000;
+        --ALT-BGCOLOUR: #333;
+        --RADIAL-COLOUR: hsl(0, 0%, 70%);
+        --SQUARE-BGCOLOUR: hsl(300, 34%, 71%);
+    }
+}
+
+/* GENERAL STYLES */
+body {
+    font: var(--FONT-SIZE) var(--FONT-FAMILY);
+    min-height: 100vh;
+    background-color: var(--BGCOLOUR);
+    background-image: radial-gradient(var(--RADIAL-COLOUR), var(--BGCOLOUR));
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+nav,
+footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+
+header,
+footer {
+    position: sticky;
+    background-color: var(--ALTBGCOLOUR);
+    color: var(--LIGHT-COLOUR);
+}
+
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: var(--LIGHT-COLOUR);
+    color: var(--DARK-COLOUR);
+    border-bottom: var(--BORDER);
+    box-shadow: var(--SHADOW);
+}
+
+main {
+    flex-grow: 1;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: min(4vw, 15px);
+}
+
+footer {
+    bottom: 0;
+}
+
+/* FEATURES */
+
+.square {
+    background-color: var(--SQUARE-BGCOLOUR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    border: var(--BORDER);
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    font-size: var(--FONT-SIZE-XL);
+    box-shadow: var(--SHADOW);
+}
+
+.square--highlight {
+    --SQUARE-BGCOLOUR: cornflowerblue;
+}
+
+/* MEDIA QUERIES */
+
+/* || SMALL || */
+@media screen and (min-width: 767px) {
+    body {
+        background-color: green;
+        background-image: radial-gradient(var(--RADIAL-COLOUR), green);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+/* || MEDIUM || */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: green;
+        background-image: radial-gradient(var(--RADIAL-COLOUR), gold);
+    }
+
+}
+
+/* || LARGE || */
+@media screen and (min-width: 992px) {
+    body {
+        background-color: firebrick;
+        background-image: radial-gradient(var(--RADIAL-COLOUR), firebrick);
+    }
+
+}
+
+/* || EXTRA LARGE || */
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: rebeccapurple;
+        background-image: radial-gradient(var(--RADIAL-COLOUR), rebeccapurple);
+    }
+
+}
+
+/* || MOBILE DEVICE LANDSCAPE || */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    body {
+        background-color: dodgerblue;
+        background-image: radial-gradient(var(--RADIAL-COLOUR), dodgerblue);
+    }
+
+    h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+/*
+Setting the aspect ratio is a more sure way to trigger the correct setting as orientation would be
+ */
+
+/*
+Syntax of a media query:
+@media \media type\ and (condition: breakpoint) {
+    CSS rules
+}
+
+Generally speaking you'll be designing from the smallest screen to the largest screen.
+Therefore using settings like min-width is more likely than max-width
+ */

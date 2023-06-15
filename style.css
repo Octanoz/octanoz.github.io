@@ -54,7 +54,7 @@ aside {
 }
 
 aside .sbheader {
-    font-size: 2.2em;
+    font-size: 2.2rem;
     margin-bottom: 1em;
 }
 
@@ -69,7 +69,7 @@ aside p {
     flex-direction: column;
     width: 30vw;
     height: 100vh;
-    background-image: url(img/wood_sheet_6720_4480.jpg);
+    background-image: url(img/wood_sheet_4000x2667_comp.jpg);
     background-size: cover;
 }
 
@@ -84,7 +84,7 @@ aside img {
 }
 
 /* MEDIA QUERY FOR MOBILE DEVICES */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 550px) {
     body {
         margin: 0;
         padding: 0;
@@ -100,11 +100,12 @@ aside img {
     .sidebar {
         flex-direction: row;
         width: 100vw;
-        height: 100vh;        
+        height: 30vh;        
     }
 
-    .sbheader {
+    aside .sbheader {
         position: absolute;
+        font-size: 1.8rem;
     }
 
     aside img {
@@ -113,7 +114,7 @@ aside img {
 
     aside p {
         display: block;
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     aside .sidebar_paragraph {
@@ -126,6 +127,14 @@ aside img {
 
     aside .sbparagraph2 {
         margin-top: 1em;
+    }
+
+    header {
+        margin: 2em 1em;
+    }
+
+    main {
+        margin: 0 1em;
     }
 }
 

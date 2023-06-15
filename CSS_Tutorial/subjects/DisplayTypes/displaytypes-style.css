@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+}
+
+/* p {
+    background: lightgray;
+} */
+
+/*
+\inline-block\ makes it possible to apply changes to a span that also affect the parent element.
+Notice how in the list example it makes the list items show next to each other instead of the default column.
+ */
+
+/* .opposite {
+    display: inline-block;
+    background-color: #333;
+    color: whitesmoke;
+    margin-top: 100px;
+    height: 200px;
+    padding: 4rem;
+} */
+
+ul {
+    list-style-type: none;
+    padding: 0.5rem;
+    text-align: right;
+    background-color: black;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin-inline: 0.5rem;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover,
+li a:focus {
+    /* text-decoration: underline; */
+    color: lightcoral;
+}
