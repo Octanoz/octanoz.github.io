@@ -17,7 +17,12 @@ body {
 }
 
 header {
+    margin-left: 32vw;
     margin-bottom: 2rem;
+}
+
+main {
+    margin-left: 32vw;
 }
 
 ul {
@@ -26,6 +31,53 @@ ul {
 
 li {
     list-style: none;
+}
+
+.project_link {
+    font-size: 1.2em;
+    color: saddlebrown;
+}
+
+.project_link:hover {
+    opacity: 0.8;
+}
+
+aside {
+    display: flex;
+    padding: 1em 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: saddlebrown;
+    color: whitesmoke;
+    align-items: center;
+}
+
+aside .sbheader {
+    font-size: 2.2em;
+    margin-bottom: 1em;
+}
+
+aside p {
+    font-size: 1.5rem;
+}
+
+.sidebar {
+    flex-direction: column;
+    width: 30vw;
+    height: 100vh;
+    background-image: url(img/wood_sheet_6720_4480.jpg);
+    background-size: cover;
+}
+
+aside img {
+    width: min(20vw,200px);
+    height: auto;
+    margin: 50px auto;
+    top: 40;
+    left: 20;
+    border: 5px double saddlebrown;
+    border-radius: 50%;
 }
 
 /* || MOBILE DEVICE LANDSCAPE || */
