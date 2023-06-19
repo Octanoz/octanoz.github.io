@@ -49,7 +49,7 @@ header {
 }
 
 nav {
-    width: 50vw;
+    width: 35vw;
     height: 30px;
     display: flex;
     background-color: var(--ACCENT-COLOUR);
@@ -143,6 +143,15 @@ aside img {
     left: 20;
     border: var(--BORDERS);
     border-radius: 50%;
+}
+
+figure img {
+    max-width: 35vw;
+    height: auto;
+}
+
+figcaption {
+    font-size: 0.9em;
 }
 
 /* MEDIA QUERY FOR MOBILE DEVICES */

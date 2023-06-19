@@ -13,26 +13,101 @@
 
 <body>
     <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#css">CSS</a>
+            <a href="#memory">Memory</a>
+            <a href="resources.html">Resources</a>
+            <a href="aboutme.html">About Me</a>
+        </nav>
         <h1>C# Projects</h1>
     </header>
 
     <main>
-        <h2>Placeholder for C# projects overview</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed delectus necessitatibus tenetur minima eligendi
-            quis quam modi numquam quia, iure vero! Assumenda labore eos placeat doloremque asperiores ex ducimus
-            sapiente.</p>
-        <p>Velit architecto nobis nesciunt sit voluptas deleniti quod, omnis tenetur. Dignissimos, quisquam non.
-            Cupiditate pariatur autem excepturi voluptates libero ullam repellat modi nobis, inventore atque laboriosam,
-            aliquid iusto velit ut!</p>
-        <p>Tempore nemo modi possimus maxime ipsam reiciendis dolores, tempora architecto aut nostrum nesciunt soluta
-            sunt cumque molestias dolor dolore. Iste nesciunt suscipit, omnis illo iusto itaque aliquid inventore
-            molestias porro!</p>
-        <p>Laboriosam nesciunt explicabo itaque similique mollitia exercitationem laborum distinctio earum dolorum,
-            autem animi voluptatem ipsam. Fugit ducimus minima, veritatis dolor obcaecati qui reiciendis delectus?
-            Dolore nesciunt voluptates iusto perspiciatis impedit.</p>
-        <p>Soluta necessitatibus, voluptas odit animi vitae, tempora optio ipsam consequatur error nobis tempore ullam
-            quas provident repellendus, sequi nemo nisi? Quia eaque in eum optio, architecto suscipit reiciendis! Hic,
-            veritatis.</p>
+        <section id="appointment_app">
+            <h2>Appointment App for a Therapist</h2>
+            <p>I'm actually making this for my mother. She's still using a traditional calendar to write down her
+                appointments even though she is remarkably digitally adept for someone born in WWII.
+                I reckon I can only improve things for her by making this app.</p>
+            <h3>Main Page</h3>
+
+            <br>
+
+            <p>At this stage the main page of the app has a placeholder for booking consults and buttons to go to client
+                overview, consults, invoicing and close, respectively.
+                There is a button for consults since I'm considering to separate the booking part out and change the
+                main
+                screen to just show the booked appointments. It feels like that would be easier to program and maintain.
+                Being able to do everything in one page is nice but it can get a bit cluttered. This should be easier to
+                understand and less prone to mistakes. Also, there is some placeholder text under the calendar which
+                shows some nonsense about how many slots do not have a client. This will probably be changed to show how
+                many clients have not been invoiced for the previous month. That seems like it would be more relevant.
+            </p>
+            <figure>
+                <img src="img/Appointment App Main Page.png" alt="Main page of the appointment app" width="591"
+                    height="450">
+                <figcaption><em>main page with placeholder consult booking</em></figcaption>
+            </figure>
+
+            <br>
+
+            <h3>Client Database</h3>
+
+            <br>
+
+            <p>Clicking on the Clients button will take you to the database. This is based on a JSON file but will
+                eventually use a MySQL database.</p>
+            <figure>
+                <img src="img/Appointment Page Client Overview.png" alt="Client database" width="1196" height="547">
+                <figcaption><em>Client database, all people are fictitious</em></figcaption>
+            </figure>
+
+            <br>
+
+            <p>The field at the top of the window lets you filter the clients by surname.
+                Clicking the middle button at the bottom brings you to a similar window that allows to enter the raw
+                data.
+                In the window the raw data for first and last name is combined in name. The different address attributes
+                are
+                also combined. There is a method that selects the zodiac sign based on the birth date that was entered.
+                There's a column that shows if a client is still actively getting consultation or is archived.
+                The archivebox column will show in which box the documentation for the ex-client can be found.</p>
+
+            <h3>Invoicing</h3>
+
+            <br>
+
+            <p>You can get to this window from the main screen as well. There's some address placeholder here that
+                probably
+                doesn't make any sense.</p>
+
+            <figure>
+                <img src="img/Appointment App Invoice Total.png" alt="Invoice window">
+                <figcaption><em>Invoicing screen, showing total invoicing value</em></figcaption>
+            </figure>
+
+            <br>
+
+            <p>Selecting a client will then filter the displayed invoicing to just that client</p>
+
+            <figure>
+                <img src="img/Appointment App Invoice Client.png"
+                    alt="Invoice window with invoicing filtered for the selected client">
+                <figcaption><em>Invoicing screen, showing invoicing value for the selected client</em></figcaption>
+            </figure>
+
+            <br>
+
+            <p>The two buttons at the top right will (eventually) allow further filtering per month and year which
+                should
+                help with administration and tax returns.</p>
+        </section>
+
+        <br>
+
+        <section id="memory">
+
+        </section>
     </main>
 
 </body>
