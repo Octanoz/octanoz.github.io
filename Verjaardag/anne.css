@@ -37,10 +37,6 @@ button {
     transition: 0.5s;
 }
 
-button:hover {
-    background-color: hsl(241, 91%, 50%);
-}
-
 #clue {
     margin: 20px;
 }
@@ -56,5 +52,9 @@ img {
     img {
         width: 400px;
         height: auto;
+    }
+
+    button:hover {
+        background-color: hsl(241, 91%, 50%);
     }
 }
