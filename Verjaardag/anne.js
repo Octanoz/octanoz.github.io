@@ -48,7 +48,7 @@ function renderQuestion(question) {
                 </label>
             `).join('<br>')}
             <br>
-            <button type="button" onclick="submitAnswer()">Submit Answer</button>
+            <button type="button" onclick="submitAnswer()">Kies Antwoord</button>
         </form>
     `;
 }
@@ -62,7 +62,7 @@ function submitAnswer() {
             currentQuestionIndex++;
             startButton.disabled = false;
         } else {
-            alert('Fout antwoord');
+            alert('Fout antwoord. Probeer het nog eens. (Of kies volgende hint als je deze vraag al beantwoordt hebt)');
         }
     } else {
         alert('Kies een antwoord');
@@ -70,7 +70,7 @@ function submitAnswer() {
 }
 
 function showClueAndImage() {
-    clueContainer.textContent = `Clue ${currentQuestionIndex + 1}: ${getClueText(currentQuestionIndex)}`;
+    clueContainer.textContent = `Hint ${currentQuestionIndex + 1}: ${getClueText(currentQuestionIndex)}`;
     imageContainer.innerHTML = `<img src="img/Treasure_Hunt_${currentQuestionIndex + 1}.jpg" alt="Zoomed In Picture">`;
 }
 
