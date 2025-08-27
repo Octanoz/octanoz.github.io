@@ -268,4 +268,10 @@
             display: none;
         }
     }
+
+    #personal {
+        ul {
+            columns: 1;
+        }
+    }
 }
