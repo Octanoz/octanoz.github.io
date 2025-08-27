@@ -1,6 +1,5 @@
 @page {
     size: A4;
-    margin: 20mm;
 }
 
 @layer reset, layout, utilities, print;
@@ -226,9 +225,10 @@
             aspect-ratio: 1;
             padding: 1em;
             border-radius: 1in;
-            background: radial-gradient(circle at bottom left, silver 70%, white);
+            background: radial-gradient(circle at bottom left, silver 65%, white);
             color: var(--accent);
             box-shadow: -4px 2px 8px 2px #3338;
+            overflow: hidden;
             z-index: 1;
 
             & .date {
@@ -250,10 +250,14 @@
             width: 210mm;
             height: 297mm;
         }
+
+        #hobbies {
+            margin-top: 10rem;
+        }
     }
 }
 
-@media (width < 500px) {
+@media screen and (width < 500px) {
     #about {
         display: block;
 
