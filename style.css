@@ -29,6 +29,8 @@
 
     body {
         min-height: 100vh;
+        max-width: 600px;
+        margin: 0 auto 1rem;
     }
 }
 
@@ -90,17 +92,17 @@
 
     #about {
         display: grid;
-        grid-template-columns: 7rem 1fr;
+        grid-template-columns: 8rem 1fr;
 
         & .about-title {
-            grid-column: 2;
+            grid-column: span 2;
+            margin-left: 10px;
         }
 
         & .life {
             grid-column: 2;
             grid-row: 3;
             height: calc(min-content + 2rem);
-            border-radius: 10px 0 0 10px;
             padding-block: 0.5em;
             background-color: var(--accent-light);
         }
@@ -108,19 +110,12 @@
         & .life-img {
             grid-column: 1;
             grid-row: 3;
-            display: grid;
             place-content: center;
-            width: 110%;
-            border-radius: 0 10px 0 0;
-            background: var(--accent);
+            padding-inline: .5em 0;
+            background: var(--accent-light);
         }
 
         & img {
-            grid-column: 1;
-            grid-row: 3;
-            align-self: center;
-            border-radius: 20px;
-            border-radius: 2in;
             background-color: var(--accent-light);
         }
 
@@ -131,7 +126,7 @@
         }
 
         & .dev-code {
-            grid-column: 2;
+            grid-column: span 2;
             grid-row: 2;
             margin-block: -.5em;
             font-size: .75rem;
@@ -140,25 +135,9 @@
     }
 
     main {
-        display: grid;
-        grid-template-columns: 7.75rem 1fr;
-        row-gap: 1em;
-
-        & aside {
-            grid-column: 1;
-            height: max-content;
-            padding: .5em .25em .5em 0.5em;
-            color: var(--text-light);
-            border-radius: 0 0 10px 0;
-            background: var(--accent);
-
-            & p {
-                margin-block: 0.5em 0;
-            }
-        }
 
         & #personal {
-            padding: 0.5em 1em;
+            padding: 0.5em 1em 0;
 
             & ul {
                 columns: 2;
@@ -176,20 +155,13 @@
             }
         }
 
-        & h2 {
-            grid-column: 2;
-        }
-
         & .dev-code {
-            grid-column: 2;
-            grid-row: 2;
             font-size: .75rem;
             color: var(--accent);
         }
 
         & .job-grid {
             display: grid;
-            row-gap: 1rem;
 
             & .job-overview {
                 grid-column: 1;
@@ -199,6 +171,43 @@
                     margin-left: 1em;
                 }
             }
+        }
+    }
+
+    footer {
+        padding: .5rem 1rem;
+        margin: 2rem 1rem 0;
+        color: white;
+        background: var(--accent-light);
+
+        & .quote-block {
+            position: relative;
+            margin: 0.25rem 0;
+            font-style: italic;
+            text-shadow: 1px 1px 2px #333;
+
+            &::before {
+                position: absolute;
+                content: '"';
+                inset: -5px 169px;
+                font-size: 2rem;
+                color: #ccc;
+                line-height: 1;
+            }
+
+            &::after {
+                position: absolute;
+                content: '"';
+                inset: -5px 350px;
+                font-size: 2rem;
+                color: #ccc;
+                line-height: 1;
+            }
+        }
+
+        & p {
+            text-shadow: 1px 1px 2px #333;
+            margin-bottom: .5em;
         }
     }
 }
@@ -213,10 +222,11 @@
     }
 
     .surface {
+        grid-column: 1 / -1;
         padding: 1rem;
+        margin-bottom: 1rem;
         border-radius: 10px;
         background: linear-gradient(45deg, var(--primary) 70%, hsl(from var(--primary) h s l / 0.2));
-        /* background: hsl(from var(--primary) h s l / 0.5); */
         color: white;
     }
 
@@ -247,32 +257,6 @@
     .single-date {
         place-content: center;
     }
-
-    .quote-block {
-        position: relative;
-        padding-left: 0rem;
-        margin: 0.25rem 0;
-        font-style: italic;
-
-        &::before {
-            position: absolute;
-            content: '"';
-            inset: -10px -10px;
-            font-size: 2rem;
-            color: #ccc;
-            line-height: 1;
-        }
-
-        &::after {
-            position: absolute;
-            content: '"';
-            inset: 25px 75px;
-            font-size: 2rem;
-            color: #ccc;
-            line-height: 1;
-        }
-    }
-
 }
 
 @layer print {
