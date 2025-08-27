@@ -103,6 +103,10 @@
             grid-column: 2;
             grid-row: 3;
             height: calc(min-content + 2rem);
+<<<<<<< HEAD
+=======
+            /* border-radius: 10px 0 0 10px; */
+>>>>>>> 58b417de54c593908762aeabb6af0daafce1cdb4
             padding-block: 0.5em;
             background-color: var(--accent-light);
         }
