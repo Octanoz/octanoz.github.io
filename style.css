@@ -189,7 +189,7 @@
             &::before {
                 position: absolute;
                 content: '"';
-                inset: -5px 269px;
+                inset: -5px 169px;
                 font-size: 2rem;
                 color: #ccc;
                 line-height: 1;
@@ -198,7 +198,7 @@
             &::after {
                 position: absolute;
                 content: '"';
-                inset: -5px 445px;
+                inset: -5px 350px;
                 font-size: 2rem;
                 color: #ccc;
                 line-height: 1;
