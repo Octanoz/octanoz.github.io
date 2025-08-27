@@ -107,6 +107,10 @@
             background-color: var(--accent-light);
         }
 
+        & .life-internal-image {
+            display: none;
+        }
+
         & .life-img {
             grid-column: 1;
             grid-row: 3;
@@ -181,28 +185,9 @@
         background: var(--accent-light);
 
         & .quote-block {
-            position: relative;
-            margin: 0.25rem 0;
+            margin: 0.25rem auto;
             font-style: italic;
             text-shadow: 1px 1px 2px #333;
-
-            &::before {
-                position: absolute;
-                content: '"';
-                inset: -5px 169px;
-                font-size: 2rem;
-                color: #ccc;
-                line-height: 1;
-            }
-
-            &::after {
-                position: absolute;
-                content: '"';
-                inset: -5px 350px;
-                font-size: 2rem;
-                color: #ccc;
-                line-height: 1;
-            }
         }
 
         & p {
@@ -264,6 +249,23 @@
         body {
             width: 210mm;
             height: 297mm;
+        }
+    }
+}
+
+@media (width < 500px) {
+    #about {
+        display: block;
+
+        & .life-internal-image {
+            display: block;
+            margin-inline: 10px;
+            max-width: 100px;
+            float: left;
+        }
+
+        & .life-img {
+            display: none;
         }
     }
 }
