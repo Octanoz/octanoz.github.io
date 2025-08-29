@@ -168,7 +168,6 @@
 
             & .job-overview {
                 grid-column: 1;
-                margin-bottom: 1rem;
 
                 & ul {
                     margin-left: 1em;
