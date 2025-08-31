@@ -26,6 +26,19 @@
         max-width: 100%;
     }
 
+    a {
+        vertical-align: bottom;
+        color: linen;
+
+        &:hover {
+            color: orange;
+        }
+
+        &:visited {
+            color: #ccc;
+        }
+    }
+
     body {
         min-height: 100vh;
         max-width: 600px;
