@@ -11,14 +11,14 @@ prevButton.onclick = () => {
     carousel.prepend(carousel.querySelector('img:last-child'));
 }
 
-document.querySelectorAll('.carousel img').forEach(img => {
-    img.addEventListener('click', () => {
-        certificates.classList.toggle('full-width');
-        carousel.classList.toggle('full-width');
-        img.classList.toggle('full-width');
-        img.classList.toggle('zoomed');
-    });
-});
+// document.querySelectorAll('.carousel img').forEach(img => {
+//     img.addEventListener('click', () => {
+//         certificates.classList.toggle('full-width');
+//         carousel.classList.toggle('full-width');
+//         img.classList.toggle('full-width');
+//         img.classList.toggle('zoomed');
+//     });
+// });
 
 
 
