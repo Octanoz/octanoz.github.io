@@ -34,9 +34,9 @@
             color: orange;
         }
 
-        &:visited {
+        /* &:visited {
             color: #ccc;
-        }
+        } */
     }
 
     body {
@@ -179,6 +179,10 @@
                 display: inline-block;
                 width: 20px;
                 aspect-ratio: 1;
+            }
+
+            & .company-logo-github {
+                margin-inline-end: .25rem;
             }
         }
 
@@ -348,5 +352,9 @@
         ul {
             columns: 1;
         }
+    }
+
+    p {
+        font-size: 16px;
     }
 }
