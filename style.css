@@ -33,10 +33,6 @@
         &:hover {
             color: orange;
         }
-
-        /* &:visited {
-            color: #ccc;
-        } */
     }
 
     body {
@@ -201,6 +197,10 @@
                     margin-left: 1em;
                 }
             }
+        }
+
+        & #education .no-bullet {
+            list-style-type: none;
         }
     }
 
